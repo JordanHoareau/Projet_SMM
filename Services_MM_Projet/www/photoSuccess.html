@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>ProjetSMM</title>
+</head>
+<body>
+    <div class="app">
+        <h1>Envoi d'une photo</h1>
+        <br/><br/>
+        <form>
+            <img id="photoSnapshot"/>
+            Titre : <br/>
+            <input type="text" name="title" size="30"/><br/><br/>
+            Catégorie <br/>
+            <select name="category" size="1">
+                <option>Paysage</option>
+                <option>Lieu</option>
+                <option>Selfie</option>
+                <option>Monument</option>
+                <option>Autre</option>
+            </select>
+            <br /><br />
+            Commentaire <br/>
+            <textarea rows="6" cols="30">
+
+            </textarea>
+            <input id="locationButton" type="submit" value="Valider la photo!" />
+        </form>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/photoSuccess.js"></script>
+    <script type="text/javascript" src="scripts/validateImage.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+</body>
+</html>
